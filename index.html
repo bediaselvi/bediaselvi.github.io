@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="tr">
+<!--
+  ============================================================
+  DÜZENLEME REHBERİ
+  Bu dosyada değiştirmen gereken yerler "DÜZENLE:" ile işaretli.
+  Tarayıcıda Ctrl+F (Mac: Cmd+F) ile "DÜZENLE" araman yeterli.
+  Kural: Yeni bir şey eklerken yanındaki örneği kopyala-yapıştır,
+  sonra sadece yazıları değiştir. <div ...> gibi etiketlere dokunma.
+  ============================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bedia Selvi | Psikiyatri Hemşireliği</title>
+<meta name="description" content="Dr. Öğr. Üyesi Bedia Selvi (Tarsuslu). Ordu Üniversitesi Psikiyatri Hemşireliği. Erkeklerde depresyon, erkeklik normları ve yardım arama üzerine araştırmalar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FCF8F2; --surface:#FFFFFF; --ink:#3A2E25; --text:#4A3D33; --muted:#76665A;
+  --line:#EADFD2; --accent:#B7894A; --accent-ink:#8A5F28; --panel:#F4EADD; --panel-text:#3A2E25; --panel-muted:#7A6A5C;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2A231E; --surface:#342B25; --ink:#F5ECE2; --text:#E6DACE; --muted:#BBA999;
+    --line:#4A3E35; --accent:#D9AE72; --accent-ink:#E8C58F; --panel:#332A23; --panel-text:#F5ECE2; --panel-muted:#BBA999;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2A231E; --surface:#342B25; --ink:#F5ECE2; --text:#E6DACE; --muted:#BBA999;
+  --line:#4A3E35; --accent:#D9AE72; --accent-ink:#E8C58F; --panel:#332A23; --panel-text:#F5ECE2; --panel-muted:#BBA999;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--accent-ink);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+img{max-width:100%}
+h1,h2,h3{font-family:Spectral,Georgia,"Times New Roman",serif;color:var(--ink);font-weight:500;margin:0}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr);min-height:100%}
+@media (min-width:960px){.layout{grid-template-columns:340px minmax(0,1fr)}}
+
+/* Side panel */
+.side{background:var(--panel);color:var(--panel-text);padding:40px 28px;border-right:1px solid var(--line)}
+@media (min-width:960px){.side{position:sticky;top:0;height:100vh;height:100dvh;overflow-y:auto;padding:56px 40px;display:flex;flex-direction:column;justify-content:space-between}}
+.side .name{font-family:Spectral,Georgia,serif;font-size:38px;line-height:1.1;font-weight:500;color:var(--panel-text);margin:0}
+.side .role{margin:14px 0 0;color:var(--panel-muted);font-size:15px;line-height:1.55}
+.side .former{margin:14px 0 0;font-size:14px;color:var(--panel-muted)}
+.side .former strong{color:var(--panel-text);font-weight:500}
+.side nav{margin-top:36px}
+.side nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+@media (min-width:960px){.side nav ul{flex-direction:column;gap:2px}}
+.side nav a{color:var(--panel-text);text-decoration:none;display:inline-block;padding:8px 0;font-size:16px;border-bottom:1px solid transparent}
+.side nav a:hover{border-bottom-color:var(--panel-muted)}
+.side .profiles{margin-top:32px;font-size:14px;color:var(--panel-muted)}
+.side .profiles ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px}
+.side .profiles a{color:var(--panel-text)}
+
+/* Main */
+main{padding:56px 24px 80px;max-width:820px;width:100%}
+@media (min-width:960px){main{padding:96px 72px 120px}}
+.lead h2{font-size:clamp(34px,5vw,52px);line-height:1.12;letter-spacing:-0.01em}
+.lead p{font-size:19px;margin:24px 0 0;max-width:62ch}
+section{margin-top:88px}
+section > h2{font-size:32px;line-height:1.2;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:28px}
+p{margin:0 0 16px}
+.muted{color:var(--muted)}
+
+.edu{list-style:none;margin:28px 0 0;padding:0}
+.edu li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.edu li:last-child{border-bottom:1px solid var(--line)}
+.edu .yr{color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:2px}
+.edu .what{font-weight:500;color:var(--ink)}
+.edu .note{font-size:15px;color:var(--muted);margin-top:2px}
+
+.themes{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:640px){.themes{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}}
+.themes h3{font-size:22px;line-height:1.3;margin-bottom:8px}
+.themes p{margin:0;color:var(--text);font-size:16px}
+
+.pub{padding:18px 0;border-top:1px solid var(--line)}
+.pub .cite{font-size:16px}
+.pub .me{font-weight:600;color:var(--ink)}
+.pub em{font-style:italic}
+.pub .meta{font-size:14px;color:var(--muted);margin-top:4px}
+.featured .pub{padding:22px 0}
+.featured .pub .cite{font-size:17px}
+details.all{margin-top:28px;border-top:1px solid var(--line)}
+details.all summary{cursor:pointer;padding:18px 0;font-weight:600;color:var(--accent-ink);list-style:none;min-height:44px;display:flex;align-items:center;gap:10px}
+details.all summary::-webkit-details-marker{display:none}
+details.all summary .chev{display:inline-block;transition:transform .2s ease}
+details.all[open] summary .chev{transform:rotate(90deg)}
+@media (prefers-reduced-motion: reduce){details.all summary .chev{transition:none}}
+.year{font-family:Spectral,Georgia,serif;font-size:22px;color:var(--ink);margin:28px 0 4px}
+
+.block{padding:20px 0;border-top:1px solid var(--line)}
+.block:last-child{border-bottom:1px solid var(--line)}
+.block .kind{font-size:14px;color:var(--muted)}
+.block .title{font-weight:500;color:var(--ink);margin-top:4px}
+.block ul{margin:10px 0 0;padding-left:20px;font-size:15px}
+.block ul li{margin:4px 0}
+
+.courses{columns:1;column-gap:40px;margin:0;padding:0;list-style:none}
+@media (min-width:640px){.courses{columns:2}}
+.courses li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+
+.empty{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px}
+.empty p:last-child{margin-bottom:0}
+.small{font-size:14px;color:var(--muted)}
+
+footer{margin-top:96px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside class="side">
+  <div>
+    <h1 class="name">Bedia Selvi</h1>
+    <p class="role">Dr. Öğr. Üyesi<br>Psikiyatri Hemşireliği Anabilim Dalı<br>Sağlık Bilimleri Fakültesi, Ordu Üniversitesi</p>
+    <p class="former">Önceki yayınlarda: <strong>Bedia Tarsuslu</strong></p>
+    <nav aria-label="Sayfa bölümleri">
+      <ul>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#arastirma">Araştırma</a></li>
+        <li><a href="#yayinlar">Yayınlar</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#ogretim">Öğretim</a></li>
+        <li><a href="#yazilar">Yazılar</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="profiles">
+    Profiller
+    <ul>
+      <li><a href="#iletisim">ORCID</a></li>
+      <li><a href="#iletisim">Google Scholar</a></li>
+      <li><a href="#iletisim">YÖK Akademik</a></li>
+    </ul>
+  </div>
+</aside>
+
+<main>
+  <div class="lead">
+    <h2>Erkekler psikolojik sıkıntıyı nasıl tanır, nasıl dile getirir ve ne zaman yardım arar?</h2>
+    <p>Psikiyatri hemşiresi ve araştırmacıyım. Erkeklik normlarının depresyon deneyimini ve yardım arama davranışını nasıl biçimlendirdiğini çalışıyorum. Bu sayfada akademik çalışmalarımı bir araya getiriyorum; zamanla deneme yazılarım da burada yer alacak.</p>
+  </div>
+
+  <section id="hakkimda" aria-labelledby="h-hakkimda">
+    <h2 id="h-hakkimda">Hakkımda</h2>
+    <p>Ordu Üniversitesi Sağlık Bilimleri Fakültesi Psikiyatri Hemşireliği Anabilim Dalı’nda öğretim üyesiyim. Daha önce Sakarya Üniversitesi’nde ve Ordu Üniversitesi’nde araştırma görevlisi olarak çalıştım; akademiye geçmeden önce Mut’ta hemşirelik meslek dersi öğretmenliği yaptım.</p>
+    <p>Yüksek lisans tezimde erkek üniversite öğrencilerinde depresyon, erkeklik rol normları ve psikolojik yardım arama tutumu arasındaki ilişkiyi inceledim. Doktora tezimde bu soruyu derinleştirerek erkeklerin depresyon deneyimlerini bilişsel-davranışçı yaklaşım çerçevesinde, karma yöntemli bir gömülü kuram çalışmasıyla ele aldım.</p>
+    <ul class="edu">
+      <li><span class="yr">2018–2025</span><div><div class="what">Doktora, Hemşirelik — Sakarya Üniversitesi</div><div class="note">Bilişsel-Davranışçı Yaklaşıma Göre Erkeklerin Depresyon Deneyimleri: Karma Yöntemli Gömülü Kuram Çalışması</div></div></li>
+      <li><span class="yr">2013–2018</span><div><div class="what">Yüksek Lisans, Hemşirelik — Sakarya Üniversitesi</div><div class="note">Erkek üniversite öğrencilerinde depresyon, rol normları ve psikolojik yardım arama tutumu arasındaki ilişkinin incelenmesi</div></div></li>
+      <li><span class="yr">2009–2013</span><div><div class="what">Lisans, Hemşirelik — Karamanoğlu Mehmetbey Üniversitesi</div></div></li>
+    </ul>
+  </section>
+
+  <section id="arastirma" aria-labelledby="h-arastirma">
+    <h2 id="h-arastirma">Araştırma</h2>
+    <div class="themes">
+      <div>
+        <h3>Erkeklerde depresyon ve yardım arama</h3>
+        <p>Erkeklerin depresyonu nasıl yaşadığı, sıkıntıyı neden farklı biçimlerde ifade ettiği ve profesyonel yardıma ulaşmanın önündeki engeller.</p>
+      </div>
+      <div>
+        <h3>Erkeklik normlarının ölçümü</h3>
+        <p>Erkeklik Normlarına Uyum Ölçeği (CMNI-30), Maskülen Depresyon Ölçeği ve Kronik Hastalıkta Erkeklik Envanteri’nin Türkçe uyarlamaları.</p>
+      </div>
+      <div>
+        <h3>Babalık ve perinatal ruh sağlığı</h3>
+        <p>Babalarda doğum sonrası depresyon, kendini damgalama ve babalık rolünün ruh sağlığıyla ilişkisi.</p>
+      </div>
+      <div>
+        <h3>Afet ve toplum ruh sağlığı</h3>
+        <p>Deprem sonrası gebelerin deneyim ve ihtiyaçları, afet sonrası bakım protokolleri ve ikincil travmatik stres.</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:28px">Çalıştığım yöntemler: nitel araştırma, karma yöntem, gömülü kuram, ölçek uyarlama.</p>
+  </section>
+
+  <section id="yayinlar" aria-labelledby="h-yayinlar">
+    <h2 id="h-yayinlar">Yayınlar</h2>
+    <p class="muted">2026 öncesi yayınlarım <strong>Tarsuslu, B.</strong> adıyla yer almaktadır.</p>
+
+    <!-- DÜZENLE: ÖNE ÇIKAN MAKALELER. En fazla 4-5 tane tut. Birini çıkarmak için <div class="pub"> ile başlayan satırın tamamını sil. -->
+    <div class="featured">
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Oliffe, J., Durat, G., Ogrodniczuk, J., &amp; Kealy, D. (2026). Evaluation of the psychometric properties for a Turkish version of the Conformity to Masculine Norms Inventory-30. <em>American Journal of Men’s Health</em>, 1–13.</div><div class="meta"><a href="https://doi.org/10.1177/15579883251414408">doi.org/10.1177/15579883251414408</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Sahin, A., &amp; Durat, G. (2023). Implicit affectivity as the predictor of the relationship between paternal postpartum depression and self-stigma in fathers: A structural equation modeling analysis. <em>International Journal of Gynecology &amp; Obstetrics</em>, 163(3), 972–977.</div><div class="meta"><a href="https://dx.doi.org/10.1002/ijgo.14904">doi.org/10.1002/ijgo.14904</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, &amp; Durat, G. (2021). Psychometric properties of the Masculine Depression Scale in Turkish male university students. <em>Perspectives in Psychiatric Care</em>, 57(1), 287–294.</div><div class="meta"><a href="https://doi.org/10.1111/ppc.12561">doi.org/10.1111/ppc.12561</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Durat, G., &amp; Altınkaynak, S. (2020). Babalarda postpartum depresyon ve ilişkili risk faktörleri: Sistematik derleme. <em>Türk Psikiyatri Dergisi</em>, 31(4), 280–289.</div><div class="meta"><a href="https://dx.doi.org/10.5080/u25084">doi.org/10.5080/u25084</a></div></div>
+    </div>
+
+    <details class="all">
+      <summary><span class="chev" aria-hidden="true">›</span> Tüm makaleleri göster (26)</summary>
+      <!-- DÜZENLE: TÜM MAKALELER. Yeni makale eklediğinde yukarıdaki (26) sayısını da güncelle.
+           Yeni yıl gerekiyorsa önce yıl başlığını ekle:
+           <h3 class="year">2027</h3>
+           Sonra altına bu örneği kopyala ve bilgileri değiştir:
+           <div class="pub"><div class="cite"><span class="me">Selvi, B.</span>, Ortak Yazar, A. Makale başlığı. <em>Dergi Adı</em>, cilt(sayı), sayfa. <a href="https://doi.org/...">DOI</a></div></div>
+           Kendi adın her zaman <span class="me">...</span> içinde yazılır, böylece kalın görünür. -->
+
+      <h3 class="year">2026</h3>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Oliffe, J., Durat, G., Ogrodniczuk, J., &amp; Kealy, D. Evaluation of the psychometric properties for a Turkish version of the Conformity to Masculine Norms Inventory-30. <em>American Journal of Men’s Health</em>, 1–13. <a href="https://doi.org/10.1177/15579883251414408">DOI</a></div></div>
+      <div class="pub"><div class="cite">Bicil, O., &amp; <span class="me">Tarsuslu, B.</span> Psychiatric nurses’ experiences through the lens of moral reckoning theory: A qualitative study. <em>Archives of Psychiatric Nursing</em>, 61, 152089. <a href="https://doi.org/10.1016/j.apnu.2026.152089">DOI</a></div></div>
+
+      <h3 class="year">2025</h3>
+      <div class="pub"><div class="cite">Yıldız, E. N., <span class="me">Tarsuslu, B.</span>, &amp; Durat, G. Correlation between disability, internalized stigma and mental recovery in patients with bipolar disorder. <em>Frontiers in Psychology</em>, 16, 1396545. <a href="https://doi.org/10.3389/fpsyg.2025.1396545">DOI</a></div></div>
+      <div class="pub"><div class="cite">Snoubar, Y., Safia, B., Turan, Z., &amp; <span class="me">Tarsuslu, B.</span> Being an elderly asylum seeker in Türkiye: Predictors of mental health and quality of life. <em>Aging &amp; Mental Health</em>, 1–9. <a href="https://dx.doi.org/10.1080/13607863.2025.2452936">DOI</a></div></div>
+      <div class="pub"><div class="cite">Tuncer, M., <span class="me">Tarsuslu, B.</span>, Korkmaz, C., &amp; Durat, G. Secondary traumatic stress, coping with earthquake stress, and disaster preparedness among social media users: A cross-sectional study. <em>Journal of Psychiatric Nursing</em>, 16(2), 116–124. <a href="https://dx.doi.org/10.14744/phd.2025.49358">DOI</a></div></div>
+
+      <h3 class="year">2024</h3>
+      <div class="pub"><div class="cite">Sahin, A., <span class="me">Tarsuslu, B.</span>, Yilmaz, A., Kuni, F., &amp; Durat, G. Turkish psychometric characteristics of the humanistic practice ability of nursing scale: Differences by education, working year, and professional satisfaction. <em>BMC Nursing</em>, 23(1), 448. <a href="https://dx.doi.org/10.1186/s12912-024-02083-9">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Yaman, Ö., Durat, G., Aygin, D., &amp; Gökçe, A. Examination of the psychometric properties of the “Masculinity in Chronic Disease Inventory” in men admitted to infertility outpatient clinic. <em>Andrology Bulletin</em>, 26(4), 248–256. <a href="https://dx.doi.org/10.24898/tandro.2024.28863">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Sahin, A., Akçay, S., &amp; Durat, G. COVID-19 pandemisinin babalık rolüne yansımaları: Bir karma yöntem araştırması. <em>Sağlık ve Toplum</em>, 34(2), 134–147.</div></div>
+
+      <h3 class="year">2023</h3>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Sahin, A., &amp; Durat, G. Implicit affectivity as the predictor of the relationship between paternal postpartum depression and self-stigma in fathers: A structural equation modeling analysis. <em>International Journal of Gynecology &amp; Obstetrics</em>, 163(3), 972–977. <a href="https://dx.doi.org/10.1002/ijgo.14904">DOI</a></div></div>
+      <div class="pub"><div class="cite">Şahin, A., Sümer, M., <span class="me">Tarsuslu, B.</span>, &amp; Tuncay, S. Gifted and typically developing students’ perceptions of the COVID-19 outbreak. <em>Sabuncuoglu Serefeddin Health Sciences</em>, 5(1), 1–21. <a href="https://doi.org/10.55895/sshs.1220375">DOI</a></div></div>
+      <div class="pub"><div class="cite">Öner, Ö., <span class="me">Tarsuslu, B.</span>, &amp; İnce, D. K. The effect of existential and neurotic anxiety level on sexual life during the COVID-19 lockdown period. <em>Journal of Education and Research in Nursing</em>, 20(2), 133–142. <a href="https://dx.doi.org/10.14744/jern.2021.21178">DOI</a></div></div>
+
+      <h3 class="year">2022</h3>
+      <div class="pub"><div class="cite">Korkmaz, C., Durat, G., &amp; <span class="me">Tarsuslu, B.</span> An evaluation of the disability, insight and self-care agency of schizophrenia patients. <em>Perspectives in Psychiatric Care</em>, 58(3), 919–927. <a href="https://dx.doi.org/10.1111/ppc.12877">DOI</a></div></div>
+      <div class="pub"><div class="cite">Durat, G., &amp; <span class="me">Tarsuslu, B.</span> The relationships between nursing and midwifery students’ cultural sensitivity and xenophobia. <em>Ege Üniversitesi Hemşirelik Fakültesi Dergisi</em>, 38(1), 11–20. <a href="https://doi.org/10.53490/egehemsire.980700">DOI</a></div></div>
+      <div class="pub"><div class="cite">Karaköse, M., <span class="me">Tarsuslu, B.</span>, &amp; Durat, G. COVID-19 pozitif tanısıyla yatan hastaların uyku kalitesinin incelenmesi. <em>Sakarya Üniversitesi Holistik Sağlık Dergisi</em>, 5(1), 19–28. <a href="https://doi.org/10.54803/sauhsd.1033966">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Şahin, A., &amp; Durat, G. COVID-19 fobisinin babalık ve erkek rolleri ile ilişkisinin incelenmesi. <em>Masculinities: A Journal of Culture &amp; Society</em>, 17.</div></div>
+
+      <h3 class="year">2021</h3>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, &amp; Durat, G. Psychometric properties of the Masculine Depression Scale in Turkish male university students. <em>Perspectives in Psychiatric Care</em>, 57(1), 287–294. <a href="https://doi.org/10.1111/ppc.12561">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Sahin, A., Durat, G., &amp; Arikan, D. An analysis of parents’ perceived stress and the parent-child relationship during the COVID-19 pandemic. <em>Bangladesh Journal of Medical Science</em>, 20(5), 97–107. <a href="https://dx.doi.org/10.3329/bjms.v20i5.55402">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Kaya, H., &amp; Öner, Ö. COVID-19 pandemisinin erken döneminde anksiyete düzeyi ve stresle başa çıkma tarzlarının incelenmesi. <em>Gevher Nesibe Journal of Medical &amp; Health Sciences</em>, 6(12), 1–9. <a href="https://dx.doi.org/10.46648/gnj.188">DOI</a></div></div>
+      <div class="pub"><div class="cite">Korkmaz, C., Çevirme, A., &amp; <span class="me">Tarsuslu, B.</span> Reflection of COVID-19 on the psychosocial structure of society. <em>Journal of Education and Research in Nursing</em>, 18(2), 206–209.</div></div>
+
+      <h3 class="year">2020</h3>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Durat, G., &amp; Altınkaynak, S. Babalarda postpartum depresyon ve ilişkili risk faktörleri: Sistematik derleme. <em>Türk Psikiyatri Dergisi</em>, 31(4), 280–289. <a href="https://dx.doi.org/10.5080/u25084">DOI</a></div></div>
+      <div class="pub"><div class="cite">Durat, G., Atmaca, G., <span class="me">Tarsuslu, B.</span>, Erol, A., Edin, Z., &amp; Keleş, M. Ruhsal bozukluğu olan bireye sahip ailelerin psikolojik dayanma güçleri ile öfke ve öfke ifade tarzlarının incelenmesi. <em>Online Türk Sağlık Bilimleri Dergisi</em>, 5(3), 519–527. <a href="https://doi.org/10.26453/otjhs.7889333">DOI</a></div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Günaydın, N., &amp; Koç, M. Öğrenci hemşirelerde eğitim stresi ile psikolojik dayanıklılık arasındaki ilişki. <em>International Journal of Human Sciences</em>, 17(1), 79–91. <a href="https://doi.org/10.14687/jhs.v17i1.5796">DOI</a></div></div>
+      <div class="pub"><div class="cite">Tunç, B., <span class="me">Tarsuslu, B.</span>, &amp; Öner, Ö. Üniversite öğrencilerinde psikolojik danışmanlık süreci: Nitel bir araştırma. <em>Türkiye Bütüncül Psikoterapi Dergisi</em>, 3(5), 194–205.</div></div>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, Cincioğlu, E., Durat, G., Şen Tepe, Ç., Özdemir, K., &amp; Akduran, F. Bir sağlık bilimleri fakültesi intörn programının öğrenciler, hemşireler ve ebeler tarafından değerlendirilmesi. <em>Journal of Innovative Healthcare Practices</em>, 1(1), 14–21.</div></div>
+
+      <h3 class="year">2018</h3>
+      <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span>, &amp; Durat, G. Erkeklerde depresyon, intihar, yardım arama ve iyi oluş. <em>Journal of Human Rhythm</em>, 4(2), 80–87.</div></div>
+      <div class="pub"><div class="cite">Solgun, C., <span class="me">Tarsuslu, B.</span>, Çulhacık, G. D., &amp; Durat, G. Yoğun bakım ünitelerinde çalışan hemşirelerin örgütsel stres düzeyleri ile benlik savunma mekanizmaları arasındaki ilişkinin incelenmesi. <em>Journal of Human Rhythm</em>, 4(2), 126–133.</div></div>
+    </details>
+
+    <h3 style="font-size:24px;margin:48px 0 12px">Kitap bölümleri</h3>
+    <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span> (2025). Adolesanlarda sigara ve tütün bağımlılığı. S. Cangöl Söğüt (Ed.), <em>Sağlık &amp; Bilim 2025: Adölesan Sağlığı</em> (ss. 143–158). Efe Akademik Yayıncılık. <a href="https://doi.org/10.59617/efepub2025161">DOI</a></div></div>
+    <div class="pub"><div class="cite"><span class="me">Tarsuslu, B.</span> (2024). Cerrahi müdahalenin çocuklar üzerindeki psikososyal etkileri. S. Tuncay &amp; A. Sarman (Ed.), <em>Sağlık &amp; Bilim 2024: Çocuk Cerrahi Hemşireliği ve Bakım Uygulamaları II</em> (ss. 165–175). Efe Akademik Yayıncılık. <a href="https://doi.org/10.59617/efepub2024172">DOI</a></div></div>
+
+    <h3 style="font-size:24px;margin:48px 0 12px">Davetli konuşma</h3>
+    <div class="pub"><div class="cite">Erkeklik ve depresyon: Erkek depresyonu. 8. Uluslararası ve 12. Ulusal Psikiyatri Hemşireliği Kongresi, Diyarbakır, Nisan 2025.</div></div>
+  </section>
+
+  <section id="projeler" aria-labelledby="h-projeler">
+    <h2 id="h-projeler">Projeler</h2>
+    <div class="block">
+      <div class="kind">TÜBİTAK 1001, araştırmacı, 2023–2026</div>
+      <div class="title">Gebeler için afet sonrası bakım protokolünün geliştirilmesi ve etkililiğinin değerlendirilmesi: Hatay, Narlıca örneklemi</div>
+    </div>
+    <div class="block">
+      <div class="kind">TÜBİTAK 2209-A, akademik danışman, 2023–2024</div>
+      <div class="title">Altı lisans öğrencisi araştırma projesine danışmanlık</div>
+      <ul>
+        <li>Erkek hemşirelerin cinsiyet rolleri penceresinden hemşirelik mesleğine yönelik deneyimleri</li>
+        <li>Hastanede yatan hastaların toplumsal cinsiyet rolleri penceresinden hemşireliğe bakışı</li>
+        <li>Otistik özelliklerin sosyal medya kullanım amaçlarına ve bağımlılığına etkisi</li>
+        <li>Sigara Kullanmada Kendini Damgalama Anketi’nin Türkçe geçerlik ve güvenirliği</li>
+        <li>Gebelerde prenatal bağlanma ve sağlık iletişiminin sigara bırakma üzerindeki etkisi</li>
+        <li>Hemşirelik öğrencilerinde çocukluk travmaları, ebeveyn tutumları ve meslek seçimi</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ogretim" aria-labelledby="h-ogretim">
+    <h2 id="h-ogretim">Öğretim</h2>
+    <p>Lisans düzeyinde ruh sağlığı ve psikiyatri hemşireliği derslerini veriyor, klinik uygulamada öğrencilere rehberlik ediyorum.</p>
+    <ul class="courses">
+      <li>Ruh Sağlığı ve Hastalıkları Hemşireliği</li>
+      <li>Konsültasyon Liyezon Psikiyatrisi Hemşireliği</li>
+      <li>Halk Sağlığı ve Hastalıkları Hemşireliği</li>
+      <li>İş Yaşamında Psikolojik Şiddet (Mobbing)</li>
+      <li>Psikoloji ve Temel Psikoloji</li>
+      <li>İntörnlük</li>
+    </ul>
+  </section>
+
+  <section id="yazilar" aria-labelledby="h-yazilar">
+    <h2 id="h-yazilar">Yazılar</h2>
+    <!-- DÜZENLE: YAZILAR. İlk denemeni eklediğinde aşağıdaki <div class="empty"> bloğunun ilk <p> satırını sil
+         ve bu örneği kopyalayıp bloğun ÜSTÜNE yapıştır (en yeni yazı en üstte olsun):
+         <div class="block"><div class="kind">Ekim 2026</div><div class="title">Deneme başlığı</div><p style="margin:8px 0 0">Denemenin tam metni ya da kısa özeti buraya.</p></div>
+         Uzun yazılarda bir paragraf bittiğinde </p><p style="margin:8px 0 0"> yazarak yeni paragrafa geç. -->
+    <div class="empty">
+      <p>Ruh sağlığı, erkeklik ve hemşirelik üzerine deneme yazılarım yakında bu bölümde yayımlanacak.</p>
+      <p class="small">Buradaki yazılar kişisel görüş yazılarıdır ve profesyonel ruh sağlığı desteğinin yerini tutmaz. Kendinizi ya da bir yakınınızı acil bir tehlike içinde hissediyorsanız 112’yi arayın.</p>
+    </div>
+  </section>
+
+  <section id="iletisim" aria-labelledby="h-iletisim">
+    <h2 id="h-iletisim">İletişim</h2>
+    <p>İş birliği önerileri, davetler ve sorularınız için bana ulaşabilirsiniz.</p>
+    <p>Ordu Üniversitesi, Sağlık Bilimleri Fakültesi<br>Psikiyatri Hemşireliği Anabilim Dalı, Ordu</p>
+    <!-- DÜZENLE: İLETİŞİM. Köşeli parantezleri silip kendi bilgilerini yaz. -->
+    <p>E-posta: [kurumsal e-posta adresiniz]<br>ORCID: [ORCID bağlantınız]<br>Google Scholar: [Google Scholar bağlantınız]<br>YÖK Akademik: [YÖK Akademik bağlantınız]</p>
+  </section>
+
+  <footer>© 2026 Bedia Selvi</footer>
+</main>
+
+</div>
+</body>
+</html>
